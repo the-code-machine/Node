@@ -6,9 +6,7 @@ const port= process.env.PORT|| 4000;
 const cors = require('cors');
 const mongoose= require('mongoose');
 const config = require('./DB');
-app.use(cors({
-  origin: 'http://127.0.0.1:5500' // Replace this with your frontend URL
-}));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
