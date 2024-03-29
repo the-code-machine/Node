@@ -4,8 +4,9 @@ const submit= require('./submit.module');
 const bodyParser = require('body-parser');
 const App= require("./app");
 const app = express();
+const cors = require('cors');
 const validator = require('validator');
-
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
